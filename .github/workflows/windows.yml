@@ -159,13 +159,6 @@ jobs:
 
           lcov --list coverage.info | tee coverage_table.txt
           
-      - name: Upload to gdrive
-        uses: team-tumbleweed/gdrive-upload-action@main
-        with:
-          filename: "coverage_table.txt"
-          folderId: ${{ secrets.FOLDERID }}
-          credentials: ${{ secrets.DRIVE_TOKEN }}
-          
       - name: Upload Coverage to Codecov
         if: matrix.build_type == 'Debug'
         uses: codecov/codecov-action@v2
