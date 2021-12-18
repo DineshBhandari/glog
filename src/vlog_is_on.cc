@@ -44,7 +44,7 @@
 #include <glog/raw_logging.h>
 #include "base/googleinit.h"
 
-// glog doesn't have annotation for change
+// glog doesn't have annotation for changes
 #define ANNOTATE_BENIGN_RACE(address, description)
 
 using std::string;
